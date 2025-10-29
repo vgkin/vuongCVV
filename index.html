@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>CV Đỗ Đình Vương</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #d7e1ec, #f5f7fa);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px;
+      overflow-x: auto; 
+    }
+
+    .cv-container {
+      display: flex;
+      flex-direction: row; 
+      flex-wrap: nowrap;
+      width: 900px;
+      min-width: 900px;
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: fadeIn 1s ease;
+    }
+
+    .cv-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .left {
+      width: 35%;
+      background: linear-gradient(160deg, #184e68, #57ca85);
+      color: #fff;
+      padding: 30px 25px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .left::after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      left: -50px;
+      width: 150%;
+      height: 150px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: rotate(-5deg);
+    }
+
+    .left img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.4s;
+    }
+
+    .left img:hover {
+      transform: scale(1.05);
+    }
+
+    .left h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+      padding-bottom: 5px;
+    }
+
+    .left p, .left li {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 6px;
+      word-wrap: break-word;
+    }
+
+    .section {
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 2;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .skills-list li::before {
+      content: "• ";
+      color: #fff;
+    }
+
+    .right {
+      width: 65%;
+      padding: 40px;
+      color: #333;
+    }
+
+    .name {
+      font-size: 32px;
+      font-weight: 700;
+      color: #184e68;
+      margin-bottom: 5px;
+      letter-spacing: 1px;
+      word-wrap: break-word;
+    }
+
+    .position {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+      color: #57ca85;
+      font-weight: 600;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #184e68;
+      border-bottom: 2px solid #57ca85;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .title::before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: #184e68;
+    }
+
+    .content p {
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .job {
+      margin-bottom: 25px;
+      background: #f9f9f9;
+      padding: 15px;
+      border-left: 4px solid #57ca85;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .job:hover {
+      transform: translateX(5px);
+    }
+
+    .job h4 {
+      font-size: 15px;
+      color: #184e68;
+      margin-bottom: 4px;
+    }
+
+    .job ul {
+      margin-left: 18px;
+    }
+
+    .job ul li {
+      font-size: 14px;
+      line-height: 1.8;
+      list-style: disc;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ffd166;
+    }
+
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      .cv-container {
+        transform: scale(0.8);
+        transform-origin: top left;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cv-container {
+        transform: scale(0.7);
+        transform-origin: top left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container">
+    <div class="left">
+      <img src="./z7163425922319_152316f74bbadbc34c212b306f4f28f9.jpg" alt="Đỗ Đình Vương">
+
+      <div class="section">
+        <h3>Liên lạc</h3>
+        <p><strong>Điện thoại:</strong><br>+84 819 837 274</p>
+        <p><strong>Email:</strong><br>vd63204@gmail.com</p>
+        <p><strong>Ngày sinh:</strong><br>20/03/2005</p>
+        <p><strong>Địa chỉ:</strong><br>38/6 Nguyễn Trường Tộ, Ea Kao, Đắk Lắk</p>
+      </div>
+
+      <div class="section">
+        <h3>Kỹ năng</h3>
+        <ul class="skills-list">
+          <li>Kiến thức cơ bản về HTML, CSS</li>
+          <li>Tự học và tìm hiểu công nghệ mới</li>
+          <li>Sử dụng công cụ lập trình cơ bản</li>
+          <li>Quản lý thời gian hiệu quả</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Dự án</h3>
+        <a href="https://vgkin.github.io/shopvuong/" target="_blank">🌐 Web bán hàng</a>
+      </div>
+    </div>
+
+    <div class="right">
+      <h1 class="name">Đỗ Đình Vương</h1>
+      <div class="position">Lập Trình Web</div>
+
+      <div class="section">
+        <div class="title">Giới thiệu</div>
+        <div class="content">
+          <p>Là sinh viên ngành Công nghệ Thông tin tại Trường Cao đẳng Đắk Lắk, tôi đang định hướng phát triển sự nghiệp trong lĩnh vực lập trình web. Tôi mong muốn được thực tập và làm việc trong môi trường năng động, để học hỏi thêm kinh nghiệm thực tế về phát triển, thiết kế website và tối ưu trải nghiệm người dùng.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">Kinh nghiệm làm việc</div>
+        <div class="job">
+         
+          <ul>
+           <p>Chưa có kinh nghiệm làm việc thực tế. Tuy nhiên, trong quá trình học tập, tôi đã được tham gia nhiều bài tập nhóm và dự án học phần, giúp rèn luyện kỹ năng phân tích yêu cầu, tư duy logic, lập trình và kiểm thử phần mềm. Tôi tin rằng sự chăm chỉ, tinh thần học hỏi và khả năng thích nghi nhanh sẽ giúp tôi hoàn thành tốt công việc được giao trong thời gian thực tập.</p>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h4>Sở thích</h4>
+          <ul>
+            <li>🎧 Nghe nhạc</li>
+            <li>🌐 Thiết kế web</li>
+            <li>💡 Học công nghệ mới</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
